@@ -51,7 +51,7 @@ resource "aws_autoscaling_group" "example" {
   health_check_type = "ELB"
 
   min_size = 2
-  max_size = 5
+  max_size = 4
 
   tag {
     key                 = "Name"
