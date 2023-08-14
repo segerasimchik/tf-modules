@@ -3,13 +3,13 @@ provider "aws" {
 }
 
 locals {
-  any_port = 0
-  http_port = 80
-  app_port = 8080
-  any_protocol = "-1"
-  tcp_protocol = "TCP"
+  any_port         = 0
+  http_port        = 80
+  app_port         = 8080
+  any_protocol     = "-1"
+  tcp_protocol     = "TCP"
   default_ssh_port = 22
-  all_ips = ["0.0.0.0/0"]
+  all_ips          = ["0.0.0.0/0"]
 }
 
 resource "aws_launch_template" "example" {
@@ -50,8 +50,8 @@ resource "aws_autoscaling_group" "example" {
   target_group_arns = [aws_lb_target_group.asg.arn]
   health_check_type = "ELB"
 
-  min_size = 2
-  max_size = 4
+  min_size = var.min_size
+  max_size = var.max_size
 
   tag {
     key                 = "Name"

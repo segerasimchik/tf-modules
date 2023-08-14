@@ -14,21 +14,21 @@ output "alb_dns_name" {
 }
 
 output "asg_name" {
-  value = aws_autoscaling_group.example.name
+  value       = aws_autoscaling_group.example.name
   description = "The autoscaling group name."
 }
 
 output "asg_min_value" {
-  value = aws_autoscaling_group.example.min_size
+  value       = aws_autoscaling_group.example.min_size
   description = "Minimum quantity of autoscaling group members."
 }
 
 output "asg_max_value" {
-  value = aws_autoscaling_group.example.max_size
+  value       = aws_autoscaling_group.example.max_size
   description = "Minimum quantity of autoscaling group members."
 }
 
 output "alb_security_group" {
-  value = aws_security_group.alb.id
+  value       = aws_security_group.alb.id
   description = "The id of the Security Group of the alb."
 }
