@@ -22,3 +22,9 @@ variable "ssh_key_name" {
   description = "SSH key name for ssh acces to instance."
   type = string
 }
+
+variable "custom_tag" {
+  description = "value"
+  type = map(string)
+  default = {}
+}
